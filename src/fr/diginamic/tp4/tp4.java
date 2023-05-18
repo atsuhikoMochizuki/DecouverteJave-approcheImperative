@@ -17,5 +17,6 @@ public class tp4 {
         CalculMoyenne.run();
         SommeDeTableaux.run();
         SommeDeTableauxDiff.run();
+        ComparaisonTableaux.run();
     }
 }
