@@ -31,6 +31,6 @@ public class InversionContenu {
             arrayCopy[j++] = i_array[i];
         System.out.println("Les valeurs des tableaux sont les suivantes :");
         for (int k = 0; k < arrayCopy.length; k++)
-            System.out.printf("array[%d]:%d\t\t\t<==>\t\t\tcopyArray[%d]:%d\n", k, arrayCopy[k], k, i_array[k]);
+            System.out.printf("array[%02d]:%03d\t\t\t<==>\t\t\tcopyArray[%02d]:%03d\n", k, arrayCopy[k], k, i_array[k]);
     }
 }
