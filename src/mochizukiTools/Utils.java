@@ -1,4 +1,4 @@
-package utils;
+package mochizukiTools;
 
 public class Utils {
 
@@ -28,4 +28,6 @@ public class Utils {
             System.out.println("ca merde");
         }
     }
+
+
 }
