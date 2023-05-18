@@ -23,7 +23,7 @@ public class Params {
     public static final int APP_MINOR_VERSION = 0;
     public static final int APP_REVISION_VERSION = 0;
     public static final String DATE = "18/05/2023";
-    public static final String APP_REPO = "https://github.com/atsuhikoMochizuki/DecouverteJava_approcheImperative.git";
+    public static final String APP_REPO = "https://github.com/atsuhikoMochizuki/DecouverteJave-approcheImperative.git";
 
 
     public static void welcomePrompt() {
