@@ -29,5 +29,17 @@ public class Utils {
         }
     }
 
+    public static void msgRequest(String i_str) {
+        System.out.printf("[%srequest%s]%s\n", Colors.ANSI_PURPLE, Colors.ANSI_RESET, i_str);
+    }
+
+    public static void msgWarning(String i_str) {
+        System.out.printf("[%swarning%s]%s\n", Colors.ANSI_YELLOW, Colors.ANSI_RESET, i_str);
+    }
+
+    public static void msgSuccess(String i_str) {
+        System.out.printf("[%ssuccess%s]%s\n", Colors.ANSI_GREEN, Colors.ANSI_RESET, i_str);
+    }
+
 
 }

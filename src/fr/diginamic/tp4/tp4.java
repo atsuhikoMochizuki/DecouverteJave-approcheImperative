@@ -21,5 +21,6 @@ public class tp4 {
         FirstLast6.run();
         Rotation.run();
         FabriquerMur.run();
+        InteractifTantQue.run();
     }
 }
