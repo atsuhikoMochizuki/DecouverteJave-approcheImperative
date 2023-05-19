@@ -23,5 +23,6 @@ public class tp4 {
         FabriquerMur.run();
         InteractifTantQue.run();
         InteractifTableMult.run();
+        InteractifChiffresSuivants.run();
     }
 }
