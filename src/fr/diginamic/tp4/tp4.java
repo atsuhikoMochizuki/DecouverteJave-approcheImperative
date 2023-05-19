@@ -20,5 +20,6 @@ public class tp4 {
         ComparaisonTableaux.run();
         FirstLast6.run();
         Rotation.run();
+        FabriquerMur.run();
     }
 }
