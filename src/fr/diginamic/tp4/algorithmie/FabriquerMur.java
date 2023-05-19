@@ -1,5 +1,6 @@
 package fr.diginamic.tp4.algorithmie;
 
+import jdk.jshell.execution.Util;
 import mochizukiTools.Utils;
 
 public class FabriquerMur {
@@ -22,67 +23,75 @@ public class FabriquerMur {
                     A l’exécution les méthodes verifier exécutées avec diverses valeurs de paramètres
                     permettent de dire si oui ou non votre algorithme fonctionne.%s
                     """, Utils.Colors.ANSI_BLUE, Utils.Colors.ANSI_RESET);
-        fabriquerMur(2, 22, 22);
+        fabriquerMur(2, 10, 52, true);
+        System.out.println("[]Tests unitaires de la fonction fabriquerMur...");
+        verifier(3, 1, 8, true);
+        verifier(3, 1, 9, false);
+        verifier(3, 2, 10, true);
+        verifier(3, 2, 8, true);
+        verifier(3, 2, 9, false);
+        verifier(6, 1, 11, true);
+        verifier(6, 0, 11, false);
+        verifier(1, 4, 11, true);
+        verifier(0, 3, 10, true);
+        verifier(1, 4, 12, false);
+        verifier(3, 1, 7, true);
+        verifier(1, 1, 7, false);
+
 
     }
 
-    static boolean fabriquerMur(int nbSmall, int nbBig, int longueur) {
+    private static void verifier(int nbSmall, int nbBig, int longueur, boolean b) {
+        if (!fabriquerMur(nbSmall, nbBig, longueur, false) == b) {
+            System.err.println("Test (" + nbSmall + ", " + nbBig + ", " +
+                    longueur + ") NON passant.");
+        } else
+            System.err.printf("%sTest (" + nbSmall + ", " + nbBig + ", " +
+                    longueur + ") passant.\n%s", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
+
+    }
+
+    static boolean fabriquerMur(int nbSmall, int nbBig, int longueur, boolean isVerbose) {
         boolean resultat = false;
-        System.out.printf("Vous souhaitez fabriquer un mur de longueur %d avec %d briques" +
-                " de longueur 5 et %d briques de longueur 1\n", longueur, nbBig, nbSmall);
-        System.out.printf("[%sverif%s]Longueur du mur > 5...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
-        if (longueur > nbBig) {
-            System.out.printf("%sOK%s\n", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-            System.out.printf("[%sverif%s]Longueur du mur > 1...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
-            if (longueur > nbSmall)
-                System.out.printf("%sOK%s\n", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-            else {
+        if (isVerbose) {
+            System.out.printf("Vous souhaitez fabriquer un mur de longueur %d avec %d briques" +
+                    " de longueur 5 et %d briques de longueur 1\n", longueur, nbBig, nbSmall);
+            System.out.printf("[%sverif%s]Vérification de l'agencement...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
+        }
+
+        if (nbSmall < 1 || nbBig < 1) {
+            if (isVerbose) {
                 System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-                System.out.printf("[%sresult%s]%sVotre Agencement est impossible%s\n",
+                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (un type de brique n'est pas utilisé)%s\n",
                         Utils.Colors.ANSI_PURPLE,
                         Utils.Colors.ANSI_RESET,
                         Utils.Colors.ANSI_RED,
                         Utils.Colors.ANSI_RESET);
-                return false;
             }
-        } else {
-            System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-            System.out.printf("[%sresult%s]%sVotre Agencement est impossible%s\n",
-                    Utils.Colors.ANSI_PURPLE,
-                    Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_RED,
-                    Utils.Colors.ANSI_RESET);
             return false;
         }
-        System.out.printf("[%sverif%s]Agencement possible des 2 types de briques...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
-        if (longueur % nbBig == 0) {
-            System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-            System.out.printf("[%sresult%s]%sVotre Agencement est impossible%s\n",
-                    Utils.Colors.ANSI_PURPLE,
-                    Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_RED,
-                    Utils.Colors.ANSI_RESET);
+        int longueurBricksSum = nbSmall + nbBig * 5;
+        if (longueur != longueurBricksSum) {
+            if (isVerbose) {
+                System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
+                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (longueurs totale des briques != longueur du mur)%s\n",
+                        Utils.Colors.ANSI_PURPLE,
+                        Utils.Colors.ANSI_RESET,
+                        Utils.Colors.ANSI_RED,
+                        Utils.Colors.ANSI_RESET);
+            }
             return false;
-        } else
+        }
+        if (isVerbose) {
             System.out.printf("%sOK%s\n", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-        System.out.printf("[%sverif%s]Cohérence du nbre de briques de longueur 1...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
-
-        if (nbSmall != longueur - (nbBig * 5)) {
-            System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-            System.out.printf("[%sresult%s]%sVotre Agencement est impossible%s\n",
+            System.out.printf("[%sresult%s]%sVotre Agencement est possible%s\n",
                     Utils.Colors.ANSI_PURPLE,
                     Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_RED,
+                    Utils.Colors.ANSI_GREEN,
                     Utils.Colors.ANSI_RESET);
-            return false;
         }
-        System.out.printf("%sOK%s\n", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-        System.out.printf("[%sresult%s]%sVotre Agencement est possible%s\n",
-                Utils.Colors.ANSI_PURPLE,
-                Utils.Colors.ANSI_RESET,
-                Utils.Colors.ANSI_GREEN,
-                Utils.Colors.ANSI_RESET);
         return true;
     }
 }
+
 
