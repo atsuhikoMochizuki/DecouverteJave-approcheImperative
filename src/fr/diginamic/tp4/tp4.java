@@ -24,5 +24,6 @@ public class tp4 {
         InteractifTantQue.run();
         InteractifTableMult.run();
         InteractifChiffresSuivants.run();
+        InteractifSommeArithmetique.run();
     }
 }
