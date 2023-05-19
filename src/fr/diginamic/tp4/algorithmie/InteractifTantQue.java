@@ -19,16 +19,13 @@ public class InteractifTantQue {
         inputStdin_1to10Nbr();
     }
 
-    static public void inputStdin_1to10Nbr() {
+    static public int inputStdin_1to10Nbr() {
         int userInput = 0;
         while (true) {
             Scanner scanner = new Scanner(System.in);
             boolean badInput = false;
             try {
                 Utils.msgRequest("Entrez un nombre compris entre 1 et 10:");
-                //nextInt will throw InputMismatchException
-                //if the next token does not match the Integer
-                //regular expression, or is out of range
                 userInput = scanner.nextInt();
             } catch (InputMismatchException exception) {
                 Utils.msgWarning("L'entrée n'est pas un nombre");
@@ -48,6 +45,7 @@ public class InteractifTantQue {
                     Utils.msgWarning("Le nombre entré est incorrect");
             }
         }
-        Utils.msgSuccess("Vous avez entré " + userInput + ". C'est très bien, je suis fier de vous.");
+        Utils.msgResult("Vous avez entré " + userInput + ". C'est très bien, je suis fier de vous.");
+        return userInput;
     }
 }

@@ -22,5 +22,6 @@ public class tp4 {
         Rotation.run();
         FabriquerMur.run();
         InteractifTantQue.run();
+        InteractifTableMult.run();
     }
 }
