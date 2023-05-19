@@ -18,5 +18,7 @@ public class tp4 {
         SommeDeTableaux.run();
         SommeDeTableauxDiff.run();
         ComparaisonTableaux.run();
+        FirstLast6.run();
+        Rotation.run();
     }
 }
