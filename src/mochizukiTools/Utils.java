@@ -53,5 +53,9 @@ public class Utils {
         System.out.printf("[%sDEBUG%s]%s%s%s\n", Colors.ANSI_CYAN, Colors.ANSI_RESET, Colors.ANSI_CYAN, i_str, Colors.ANSI_RESET);
     }
 
-
+    public static int generateRandomInt(int i_min, int i_max) {
+        double randomDouble = Math.random();
+        randomDouble = randomDouble * i_max + i_min;
+        return (int) randomDouble;
+    }
 }

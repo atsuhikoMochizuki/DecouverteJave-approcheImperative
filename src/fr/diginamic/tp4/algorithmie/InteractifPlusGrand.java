@@ -16,14 +16,13 @@ public class InteractifPlusGrand {
     }
 
     public static void askNbrAndShowBiggie(int i_nbrOfNumbers) {
-
         int[] listNumbers = new int[i_nbrOfNumbers];
         for (int i = 0; i < listNumbers.length; i++)
             listNumbers[i] = 0;
         Utils.msgRequest("Entrez " + i_nbrOfNumbers + " nombres:");
 
         for (int i = 0; i < listNumbers.length; i++) {
-            listNumbers[i] = inputStdin_1to10Nbr_noDisplayResult();
+            listNumbers[i] = inputStdin_noDisplayResult();
             if (i != (listNumbers.length) - 1) {
                 String str = "Merci, il vous manque encore " + (listNumbers.length - i - 1) + " nombres à entrer.";
                 Utils.msgInfo(str);
@@ -41,7 +40,7 @@ public class InteractifPlusGrand {
         Utils.msgResult(str);
     }
 
-    static public int inputStdin_1to10Nbr_noDisplayResult() {
+    static public int inputStdin_noDisplayResult() {
         int userInput = 0;
         while (true) {
             Scanner scanner = new Scanner(System.in);
