@@ -21,9 +21,10 @@ public class tp4 {
         FirstLast6.run();
         Rotation.run();
         FabriquerMur.run();
-        InteractifTantQue.run();
+        /*InteractifTantQue.run();
         InteractifTableMult.run();
         InteractifChiffresSuivants.run();
-        InteractifSommeArithmetique.run();
+        InteractifSommeArithmetique.run();*/
+        InteractifPlusGrand.run();
     }
 }

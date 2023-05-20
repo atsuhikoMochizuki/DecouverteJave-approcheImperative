@@ -49,5 +49,9 @@ public class Utils {
         System.out.printf("[%sinfo%s]%s%s%s\n", Colors.ANSI_BLUE, Colors.ANSI_RESET, Colors.ANSI_BLUE, i_str, Colors.ANSI_RESET);
     }
 
+    public static void msgDebug(String i_str) {
+        System.out.printf("[%sDEBUG%s]%s%s%s\n", Colors.ANSI_CYAN, Colors.ANSI_RESET, Colors.ANSI_CYAN, i_str, Colors.ANSI_RESET);
+    }
+
 
 }
