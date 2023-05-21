@@ -33,8 +33,7 @@ public class InteractifPlusGrand {
         Utils.msgInfo("Recherche du nombre le plus grand...");
         int biggieNbr = 0;
         for (int i = 0; i < listNumbers.length; i++) {
-            if (listNumbers[i] > biggieNbr)
-                biggieNbr = listNumbers[i];
+            if (listNumbers[i] > biggieNbr) biggieNbr = listNumbers[i];
         }
         str = String.valueOf(biggieNbr);
         Utils.msgResult(str);
@@ -52,8 +51,7 @@ public class InteractifPlusGrand {
                 java.awt.Toolkit.getDefaultToolkit().beep();
                 badInput = true;
             }
-            if (!badInput)
-                break;
+            if (!badInput) break;
         }
         return userInput;
     }

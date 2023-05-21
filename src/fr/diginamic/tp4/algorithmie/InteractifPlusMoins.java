@@ -29,8 +29,7 @@ public class InteractifPlusMoins {
             if (i < 1) {
                 userInput = inputNumberInRange(1, 100, true);
                 i++;
-            } else
-                userInput = inputNumberInRange(1, 100, false);
+            } else userInput = inputNumberInRange(1, 100, false);
             if (userInput < numberToFind) {
                 Utils.msgInfo("PLUS!");
                 triesNumber++;
@@ -68,10 +67,8 @@ public class InteractifPlusMoins {
                         i = i_max;
                     }
                 }
-                if (verif)
-                    break;
-                else
-                    Utils.msgWarning("Le nombre entré est incorrect");
+                if (verif) break;
+                else Utils.msgWarning("Le nombre entré est incorrect");
             }
         }
         return userInput;

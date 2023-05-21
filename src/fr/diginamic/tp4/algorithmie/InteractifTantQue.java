@@ -7,14 +7,13 @@ import java.util.Scanner;
 
 public class InteractifTantQue {
     public static void run() {
-        System.out.println(Utils.Colors.ANSI_PURPLE + "[]EXERCICE 11 : INTERACTIF TANT QUE" + Utils.Colors.ANSI_RESET);
-        System.out.printf("""
-                %s=> CONSIGNE : Ecrire un programme qui demande un nombre à l’utilisateur qui doit être obligatoirement
+        Utils.msgTitle("EXERCICE 11 : INTERACTIF TANT QUE");
+        Utils.msgInfo("""
+                CONSIGNE : Ecrire un programme qui demande un nombre à l’utilisateur qui doit être obligatoirement
                                 compris entre 1 et 10 :
                                 -Tant que ce nombre n’est pas compris entre 1 et 10, le programme redemande un
                                 nombre à l’utilisateur.
-                                -Si le nombre est compris entre 1 et 10, le programme affiche ce nombre et se termine.%s
-                    """, Utils.Colors.ANSI_BLUE, Utils.Colors.ANSI_RESET);
+                                -Si le nombre est compris entre 1 et 10, le programme affiche ce nombre et se termine.""");
         inputStdin_1to10Nbr();
     }
 
@@ -38,10 +37,8 @@ public class InteractifTantQue {
                         i = 10;
                     }
                 }
-                if (verif)
-                    break;
-                else
-                    Utils.msgWarning("Le nombre entré est incorrect");
+                if (verif) break;
+                else Utils.msgWarning("Le nombre entré est incorrect");
             }
         }
         Utils.msgResult("Vous avez entré " + userInput + ". C'est très bien, je suis fier de vous.");

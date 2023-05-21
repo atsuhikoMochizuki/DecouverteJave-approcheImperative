@@ -6,7 +6,7 @@ public class ExerciceTableauEntier {
     public static int[] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     public static void run() {
-        System.out.println(Utils.Colors.ANSI_PURPLE + "[]EXERCICE 2 : PARCOURS D'UN TABLEAU D'ENTIERS" + Utils.Colors.ANSI_RESET);
+        Utils.msgTitle("EXERCICE 2 : PARCOURS D'UN TABLEAU D'ENTIERS");
         showNumberInArray(entiers, 0);
         showArrayLength(entiers);
         showlastItemInArray(entiers);
@@ -14,7 +14,9 @@ public class ExerciceTableauEntier {
     }
 
     public static void showNumberInArray(int[] i_array, int i_index) {
-        System.out.printf("%s=> CONSIGNE : Soit le tableau suivant {", Utils.Colors.ANSI_BLUE);
+        Utils.msgInfo("Soit le tableau suivant:");
+
+        System.out.printf("%s{", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < i_array.length; i++) {
             if (i != i_array.length - 1)
                 System.out.printf(" %d,", i_array[i]);
@@ -26,8 +28,9 @@ public class ExerciceTableauEntier {
         System.out.println(i_array[i_index]);
     }
 
-    public static void showArrayLength(int i_array[]) {
-        System.out.printf("%s=> CONSIGNE : Soit le tableau suivant {", Utils.Colors.ANSI_BLUE);
+    public static void showArrayLength(int[] i_array) {
+        Utils.msgInfo("Soit le tableau suivant:");
+        System.out.printf("%s{", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < i_array.length; i++) {
             if (i != i_array.length - 1)
                 System.out.printf(" %d,", i_array[i]);
@@ -38,8 +41,9 @@ public class ExerciceTableauEntier {
         System.out.println(i_array.length);
     }
 
-    public static void showlastItemInArray(int i_array[]) {
-        System.out.printf("%s=> CONSIGNE : Soit le tableau suivant {", Utils.Colors.ANSI_BLUE);
+    public static void showlastItemInArray(int[] i_array) {
+        Utils.msgInfo("Soit le tableau suivant:");
+        System.out.printf("%s{", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < i_array.length; i++) {
             if (i != i_array.length - 1)
                 System.out.printf(" %d,", i_array[i]);
@@ -50,8 +54,9 @@ public class ExerciceTableauEntier {
         System.out.println(i_array[i_array.length - 1]);
     }
 
-    public static void updateItemInArray(int i_array[], int i_item, int i_value) {
-        System.out.printf("%s=> CONSIGNE : Soit le tableau suivant {", Utils.Colors.ANSI_BLUE);
+    public static void updateItemInArray(int[] i_array, int i_item, int i_value) {
+        Utils.msgInfo("Soit le tableau suivant:");
+        System.out.printf("%s{", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < i_array.length; i++) {
             if (i != i_array.length - 1)
                 System.out.printf(" %d,", i_array[i]);
@@ -59,9 +64,11 @@ public class ExerciceTableauEntier {
                 System.out.printf(" %d};", i_array[i]);
         }
         System.out.printf("\nModifiez la valeur de l’élément d’index 4 et donnez lui la valeur 8%s\n", Utils.Colors.ANSI_RESET);
-        System.out.printf("[]La valeur actuelle de l'élément %s est %d...\n", i_item, i_array[i_item]);
-        System.out.printf("[]Modification...\n");
+        String str = "La valeur actuelle de l'élément " + i_item + " est " + i_array[i_item];
+        Utils.msgInfo(str);
+        Utils.msgInfo("Modification...");
         i_array[i_item] = i_value;
-        System.out.printf("[]La nouvelle valeur de l'élément %s est %d...\n", i_item, i_array[i_item]);
+        str = "La nouvelle valeur de l'élément " + i_item + " est " + i_array[i_item];
+        Utils.msgResult(str);
     }
 }

@@ -46,7 +46,7 @@ public class InteractifFibonacci {
             }
             FibonnaciSuit = ArrayHelper.pushInt(FibonnaciSuit, numberToPush);
             if (i == userInput - 1) {
-                String msgResult = "Generation de la suite de Fibonnaci jusqu'au rang " + userInput + " :";
+                String msgResult = "Génération de la suite de Fibonnaci jusqu'au rang " + userInput + " :";
                 Utils.msgResult(msgResult);
                 for (int j = 0; j <= i; j++) {
                     if (j != i) System.out.printf("%d ", FibonnaciSuit[j]);

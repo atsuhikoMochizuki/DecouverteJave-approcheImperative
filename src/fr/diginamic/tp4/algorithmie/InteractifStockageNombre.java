@@ -60,8 +60,7 @@ public class InteractifStockageNombre {
                 default:
                     Utils.beep();
             }
-            if (exitRequest)
-                break;
+            if (exitRequest) break;
         }
     }
 
@@ -76,15 +75,13 @@ public class InteractifStockageNombre {
                 if (userInput.equals("q")) {
                     Utils.msgInfo("Sortie du programme");
                     return -1;
-                } else
-                    returnValue = Integer.parseInt(userInput);
+                } else returnValue = Integer.parseInt(userInput);
             } catch (InputMismatchException exception) {
                 Utils.msgWarning("L'entrée n'est pas un nombre");
                 java.awt.Toolkit.getDefaultToolkit().beep();
                 badInput = true;
             }
-            if (!badInput)
-                break;
+            if (!badInput) break;
         }
         return returnValue;
     }

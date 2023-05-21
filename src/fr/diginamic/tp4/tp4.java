@@ -8,7 +8,7 @@ import mochizukiTools.Utils;
 
 public class tp4 {
     public static void run() {
-        System.out.println(Utils.Colors.ANSI_YELLOW + "[]LANCEMENT DU TP4 : TABLEAUX, BOUCLES ET CONDITIONS NIVEAU 2" + Utils.Colors.ANSI_RESET);
+        Utils.msgTitle("LANCEMENT DU TP4 : TABLEAUX, BOUCLES ET CONDITIONS NIVEAU 2");
         AffichageInverse.run();
         InversionContenu.run();
         AffichagePartiel.run();

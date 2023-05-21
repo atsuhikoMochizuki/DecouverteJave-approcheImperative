@@ -50,34 +50,28 @@ public class Interfactif21Batons {
                         prompting21BationsGame("Je retire 3 bâtons", player_e.COMPUTER);
                         lastPlayerIsUser = false;
                         nbrBatons -= 3;
-                        if (nbrBatons < 1)
-                            nbreBatonsNull = true;
+                        if (nbrBatons < 1) nbreBatonsNull = true;
                         break;
                     case 2:
                         prompting21BationsGame("Je retire 2 bâtons", player_e.COMPUTER);
                         lastPlayerIsUser = false;
                         nbrBatons -= 2;
-                        if (nbrBatons < 1)
-                            nbreBatonsNull = true;
+                        if (nbrBatons < 1) nbreBatonsNull = true;
                         break;
                     case 3:
                         prompting21BationsGame("Je retire 1 bâtons", player_e.COMPUTER);
                         lastPlayerIsUser = false;
                         nbrBatons -= 1;
-                        if (nbrBatons < 1)
-                            nbreBatonsNull = true;
+                        if (nbrBatons < 1) nbreBatonsNull = true;
                         break;
                     default:
                         System.err.println("Erreur d'execution");
                 }
             }
-            if (nbreBatonsNull)
-                break;
+            if (nbreBatonsNull) break;
         }
-        if (lastPlayerIsUser)
-            prompting21BationsGame("Vous avez perdu cher utilisateur", player_e.USER);
-        else
-            prompting21BationsGame("Il semblerait que la machine a dépassé l'homme!", player_e.COMPUTER);
+        if (lastPlayerIsUser) prompting21BationsGame("Vous avez perdu cher utilisateur", player_e.USER);
+        else prompting21BationsGame("Il semblerait que la machine a dépassé l'homme!", player_e.COMPUTER);
     }
 
     static public int inputStdin_1to3() {
@@ -99,10 +93,8 @@ public class Interfactif21Batons {
                         i = 3;
                     }
                 }
-                if (verif)
-                    break;
-                else
-                    Utils.msgWarning("Le nombre entré est incorrect");
+                if (verif) break;
+                else Utils.msgWarning("Le nombre entré est incorrect");
             }
         }
         return userInput;
@@ -110,19 +102,9 @@ public class Interfactif21Batons {
 
     public static void prompting21BationsGame(String i_str, player_e typeOfgamer) {
         if (typeOfgamer == player_e.USER) {
-            System.out.printf("[%sJoueur%s]%s%s%s\n",
-                    Utils.Colors.ANSI_BLUE,
-                    Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_BLUE,
-                    i_str,
-                    Utils.Colors.ANSI_RESET);
+            System.out.printf("[%sJoueur%s]%s%s%s\n", Utils.Colors.ANSI_BLUE, Utils.Colors.ANSI_RESET, Utils.Colors.ANSI_BLUE, i_str, Utils.Colors.ANSI_RESET);
         } else {
-            System.out.printf("[%sOrdinateur%s]%s%s%s\n",
-                    Utils.Colors.ANSI_YELLOW,
-                    Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_YELLOW,
-                    i_str,
-                    Utils.Colors.ANSI_RESET);
+            System.out.printf("[%sOrdinateur%s]%s%s%s\n", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET, Utils.Colors.ANSI_YELLOW, i_str, Utils.Colors.ANSI_RESET);
         }
     }
 }

@@ -8,28 +8,23 @@ public class FirstLast6 {
     public static int[] array3 = {6, 3, 7, -1, 45, 6};
 
     public static void run() {
-        System.out.println(Utils.Colors.ANSI_PURPLE + "[]EXERCICE 8 : FIRST LAST 6" + Utils.Colors.ANSI_RESET);
-        System.out.printf("%s=> CONSIGNE : \nSoit le tableau 1 {", Utils.Colors.ANSI_BLUE);
+        Utils.msgTitle("EXERCICE 8 : FIRST LAST 6");
+        Utils.msgInfo("CONSIGNE : \nSoit le tableau 1 :");
+        System.out.printf("%s{", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < array1.length; i++) {
-            if (i != array1.length - 1)
-                System.out.printf(" %d,", array1[i]);
-            else
-                System.out.printf(" %d", array1[i]);
+            if (i != array1.length - 1) System.out.printf(" %d,", array1[i]);
+            else System.out.printf(" %d", array1[i]);
         }
         System.out.print("}\n");
         System.out.printf("%set le tableau 2 {", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < array2.length; i++) {
-            if (i != array2.length - 1)
-                System.out.printf(" %d,", array2[i]);
-            else
-                System.out.printf(" %d}\n", array2[i]);
+            if (i != array2.length - 1) System.out.printf(" %d,", array2[i]);
+            else System.out.printf(" %d}\n", array2[i]);
         }
         System.out.printf("%set le tableau 3 {", Utils.Colors.ANSI_BLUE);
         for (int i = 0; i < array3.length; i++) {
-            if (i != array3.length - 1)
-                System.out.printf(" %d,", array3[i]);
-            else
-                System.out.printf(" %d}\n", array3[i]);
+            if (i != array3.length - 1) System.out.printf(" %d,", array3[i]);
+            else System.out.printf(" %d}\n", array3[i]);
         }
         System.out.printf("""
                 - Calculer une valeur booléenne qui contrôle le tableau de la sorte :
@@ -47,7 +42,6 @@ public class FirstLast6 {
     public static boolean firstLast6(int[] i_array) {
         if (i_array.length >= 1) {
             return i_array[0] == i_array[i_array.length - 1];
-        } else
-            return false;
+        } else return false;
     }
 }

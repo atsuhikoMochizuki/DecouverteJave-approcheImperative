@@ -5,8 +5,7 @@ import mochizukiTools.Utils;
 
 public class FabriquerMur {
     public static void run() {
-        System.out.println(Utils.Colors.ANSI_PURPLE + "[]EXERCICE 10 : FABRIQUER UN MUR" + Utils.Colors.ANSI_RESET);
-        System.out.printf("Effectuez une rotation à droite des éléments\n%s", Utils.Colors.ANSI_RESET);
+        Utils.msgTitle("EXERCICE 10 : FABRIQUER UN MUR");
         System.out.printf("""
                 %s=> CONSIGNE : Produire un algorithme qui retourne s’il est possible ou non de
                 fabriquer un mur avec des briques de longueur 1 et des briques de longueur 5
@@ -41,30 +40,22 @@ public class FabriquerMur {
 
     private static void verifier(int nbSmall, int nbBig, int longueur, boolean b) {
         if (!fabriquerMur(nbSmall, nbBig, longueur, false) == b) {
-            System.err.println("Test (" + nbSmall + ", " + nbBig + ", " +
-                    longueur + ") NON passant.s");
+            System.err.println("Test (" + nbSmall + ", " + nbBig + ", " + longueur + ") NON passant");
         } else
-            System.err.printf("%sTest (" + nbSmall + ", " + nbBig + ", " +
-                    longueur + ") passant.\n%s", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-
+            System.err.printf("%sTest (" + nbSmall + ", " + nbBig + ", " + longueur + ") passant.\n%s", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
     }
 
     static boolean fabriquerMur(int nbSmall, int nbBig, int longueur, boolean isVerbose) {
         boolean resultat = false;
         if (isVerbose) {
-            System.out.printf("Vous souhaitez fabriquer un mur de longueur %d avec %d briques" +
-                    " de longueur 5 et %d briques de longueur 1\n", longueur, nbBig, nbSmall);
+            System.out.printf("Vous souhaitez fabriquer un mur de longueur %d avec %d briques" + " de longueur 5 et %d briques de longueur 1\n", longueur, nbBig, nbSmall);
             System.out.printf("[%sverif%s]Vérification de l'agencement...", Utils.Colors.ANSI_YELLOW, Utils.Colors.ANSI_RESET);
         }
 
         if (nbSmall < 1 || nbBig < 1) {
             if (isVerbose) {
                 System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (un type de brique n'est pas utilisé)%s\n",
-                        Utils.Colors.ANSI_PURPLE,
-                        Utils.Colors.ANSI_RESET,
-                        Utils.Colors.ANSI_RED,
-                        Utils.Colors.ANSI_RESET);
+                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (un type de brique n'est pas utilisé)%s\n", Utils.Colors.ANSI_PURPLE, Utils.Colors.ANSI_RESET, Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
             }
             return false;
         }
@@ -72,24 +63,15 @@ public class FabriquerMur {
         if (longueur != longueurBricksSum) {
             if (isVerbose) {
                 System.out.printf("%sNOK%s\n", Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
-                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (longueurs totale des briques != longueur du mur)%s\n",
-                        Utils.Colors.ANSI_PURPLE,
-                        Utils.Colors.ANSI_RESET,
-                        Utils.Colors.ANSI_RED,
-                        Utils.Colors.ANSI_RESET);
+                System.out.printf("[%sresult%s]%sVotre Agencement est impossible (longueurs totale des briques != longueur du mur)%s\n", Utils.Colors.ANSI_PURPLE, Utils.Colors.ANSI_RESET, Utils.Colors.ANSI_RED, Utils.Colors.ANSI_RESET);
             }
             return false;
         }
         if (isVerbose) {
             System.out.printf("%sOK%s\n", Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
-            System.out.printf("[%sresult%s]%sVotre Agencement est possible%s\n",
-                    Utils.Colors.ANSI_PURPLE,
-                    Utils.Colors.ANSI_RESET,
-                    Utils.Colors.ANSI_GREEN,
-                    Utils.Colors.ANSI_RESET);
+            System.out.printf("[%sresult%s]%sVotre Agencement est possible%s\n", Utils.Colors.ANSI_PURPLE, Utils.Colors.ANSI_RESET, Utils.Colors.ANSI_GREEN, Utils.Colors.ANSI_RESET);
         }
         return true;
     }
 }
-
 

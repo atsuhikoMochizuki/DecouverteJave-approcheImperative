@@ -38,8 +38,7 @@ public class Utils {
     }
 
     public static void msgError(String i_str) {
-        System.out.printf("[%Error%s]%s\n", Colors.ANSI_YELLOW, Colors.ANSI_RESET, i_str);
-        System.exit(-1);
+        System.out.printf("[%sError%s]%s\n", Colors.ANSI_RED, Colors.ANSI_RESET, i_str);
     }
 
 
