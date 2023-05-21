@@ -19,7 +19,7 @@ public class Params {
                 4 : Tableaux, boucles et conditions niveau 2
             """;
     public static final String APP_AUTHOR = "Atsuhiko Mochizuki";
-    public static final int APP_MAJOR_VERSION = 1;
+    public static final int APP_MAJOR_VERSION = 2;
     public static final int APP_MINOR_VERSION = 0;
     public static final int APP_REVISION_VERSION = 0;
     public static final String DATE = "18/05/2023";
