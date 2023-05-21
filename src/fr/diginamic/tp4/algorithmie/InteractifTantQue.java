@@ -4,7 +4,6 @@ import mochizukiTools.Utils;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.lang.RuntimeException;
 
 public class InteractifTantQue {
     public static void run() {
@@ -25,7 +24,7 @@ public class InteractifTantQue {
             Scanner scanner = new Scanner(System.in);
             boolean badInput = false;
             try {
-                Utils.msgRequest("Entrez un nombre compris entre 1 et 10:");
+                Utils.msgPrompt("Entrez un nombre compris entre 1 et 10:");
                 userInput = scanner.nextInt();
             } catch (InputMismatchException exception) {
                 Utils.msgWarning("L'entrée n'est pas un nombre");

@@ -19,7 +19,7 @@ public class InteractifPlusGrand {
         int[] listNumbers = new int[i_nbrOfNumbers];
         for (int i = 0; i < listNumbers.length; i++)
             listNumbers[i] = 0;
-        Utils.msgRequest("Entrez " + i_nbrOfNumbers + " nombres:");
+        Utils.msgPrompt("Entrez " + i_nbrOfNumbers + " nombres:");
 
         for (int i = 0; i < listNumbers.length; i++) {
             listNumbers[i] = inputStdin_noDisplayResult();
