@@ -37,6 +37,12 @@ public class Utils {
         System.out.printf("[%swarning%s]%s\n", Colors.ANSI_YELLOW, Colors.ANSI_RESET, i_str);
     }
 
+    public static void msgError(String i_str) {
+        System.out.printf("[%Error%s]%s\n", Colors.ANSI_YELLOW, Colors.ANSI_RESET, i_str);
+        System.exit(-1);
+    }
+
+
     public static void msgResult(String i_str) {
         System.out.printf("[%sresult%s]%s%s%s\n", Colors.ANSI_GREEN, Colors.ANSI_RESET, Colors.ANSI_GREEN, i_str, Colors.ANSI_RESET);
     }
