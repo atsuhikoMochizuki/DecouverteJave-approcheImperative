@@ -8,7 +8,7 @@ import mochizukiTools.Utils;
 
 public class tp4 {
     public static void run() {
-       /* System.out.println(Utils.Colors.ANSI_YELLOW + "[]LANCEMENT DU TP4 : TABLEAUX, BOUCLES ET CONDITIONS NIVEAU 2" + Utils.Colors.ANSI_RESET);
+        System.out.println(Utils.Colors.ANSI_YELLOW + "[]LANCEMENT DU TP4 : TABLEAUX, BOUCLES ET CONDITIONS NIVEAU 2" + Utils.Colors.ANSI_RESET);
         AffichageInverse.run();
         InversionContenu.run();
         AffichagePartiel.run();
@@ -20,15 +20,15 @@ public class tp4 {
         ComparaisonTableaux.run();
         FirstLast6.run();
         Rotation.run();
-        FabriquerMur.run();*/
-        /*InteractifTantQue.run();
+        FabriquerMur.run();
+        InteractifTantQue.run();
         InteractifTableMult.run();
         InteractifChiffresSuivants.run();
-        InteractifSommeArithmetique.run();*/
-//        InteractifPlusGrand.run();
-//        InteractifPlusMoins.run();
-//        InteractifStockageNombre.run();
-//        InteractifFibonacci.run();
+        InteractifSommeArithmetique.run();
+        InteractifPlusGrand.run();
+        InteractifPlusMoins.run();
+        InteractifStockageNombre.run();
+        InteractifFibonacci.run();
         Interfactif21Batons.run();
     }
 }

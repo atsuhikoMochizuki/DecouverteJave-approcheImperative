@@ -26,6 +26,7 @@ public class InteractifStockageNombre {
     }
 
     public static void storageNumbers() {
+        boolean exitRequest = false;
         int[] array = new int[0];
         String menu = """
                 ______                             _   _                 _              \s
@@ -44,6 +45,9 @@ public class InteractifStockageNombre {
             Utils.msgPrompt("Entrez un choix (1:AjoutNbre / 2: AfficherTableau / q: quit) :");
             int userMenuChoice = inputStdin_int_optionQuit();
             switch (userMenuChoice) {
+                case -1:
+                    exitRequest = true;
+                    break;
                 case 1:
                     Utils.msgPrompt("Entrez la nouvelle valeur à insérer dans le tableau:");
                     int userIntInput = inputStdin_int_optionQuit();
@@ -56,6 +60,8 @@ public class InteractifStockageNombre {
                 default:
                     Utils.beep();
             }
+            if (exitRequest)
+                break;
         }
     }
 
@@ -69,8 +75,7 @@ public class InteractifStockageNombre {
                 userInput = scanner.nextLine();
                 if (userInput.equals("q")) {
                     Utils.msgInfo("Sortie du programme");
-                    System.exit(0);
-                    break;
+                    return -1;
                 } else
                     returnValue = Integer.parseInt(userInput);
             } catch (InputMismatchException exception) {

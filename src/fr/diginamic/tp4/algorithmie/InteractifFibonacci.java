@@ -53,6 +53,7 @@ public class InteractifFibonacci {
                     else
                         System.out.printf("%s%d%s ", Utils.Colors.ANSI_GREEN, FibonnaciSuit[j], Utils.Colors.ANSI_RESET);
                 }
+                System.out.print("\n");
                 end = true;
             }
             if (end) break;

@@ -37,7 +37,7 @@ public class FabriquerMur {
         verifier(1, 4, 12, false);
         verifier(3, 1, 7, true);
         verifier(1, 1, 7, false);
-}
+    }
 
     private static void verifier(int nbSmall, int nbBig, int longueur, boolean b) {
         if (!fabriquerMur(nbSmall, nbBig, longueur, false) == b) {
