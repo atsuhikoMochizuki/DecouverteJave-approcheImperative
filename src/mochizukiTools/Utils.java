@@ -58,4 +58,16 @@ public class Utils {
         randomDouble = randomDouble * i_max + i_min;
         return (int) randomDouble;
     }
+
+    public static void beep() {
+        java.awt.Toolkit.getDefaultToolkit().beep();
+    }
+
+    public static void wait(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+    }
 }

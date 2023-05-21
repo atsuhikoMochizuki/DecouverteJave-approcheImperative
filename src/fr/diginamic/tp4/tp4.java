@@ -26,6 +26,7 @@ public class tp4 {
         InteractifChiffresSuivants.run();
         InteractifSommeArithmetique.run();*/
 //        InteractifPlusGrand.run();
-        InteractifPlusMoins.run();
+//        InteractifPlusMoins.run();
+        InteractifStockageNombre.run();
     }
 }
