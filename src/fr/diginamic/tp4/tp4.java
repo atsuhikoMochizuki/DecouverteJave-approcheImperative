@@ -28,6 +28,7 @@ public class tp4 {
 //        InteractifPlusGrand.run();
 //        InteractifPlusMoins.run();
 //        InteractifStockageNombre.run();
-        InteractifFibonacci.run();
+//        InteractifFibonacci.run();
+        Interfactif21Batons.run();
     }
 }

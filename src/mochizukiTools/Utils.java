@@ -30,7 +30,7 @@ public class Utils {
     }
 
     public static void msgPrompt(String i_str) {
-        System.out.printf("[%sprompt%s]%s\n", Colors.ANSI_PURPLE, Colors.ANSI_RESET, i_str);
+        System.out.printf("[%sprompt%s]%s%s%s\n", Colors.ANSI_PURPLE, Colors.ANSI_RESET, Colors.ANSI_PURPLE, i_str, Colors.ANSI_RESET);
     }
 
     public static void msgWarning(String i_str) {
