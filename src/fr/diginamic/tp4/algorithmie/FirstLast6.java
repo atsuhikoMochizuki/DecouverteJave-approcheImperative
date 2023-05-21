@@ -27,7 +27,7 @@ public class FirstLast6 {
             else System.out.printf(" %d}\n", array3[i]);
         }
         System.out.printf("""
-                - Calculer une valeur booléenne qui contrôle le tableau de la sorte :
+                - Calculer une valeur booléenne qui contrôle le tableau de la sorte:
                     -elle vaut true si le tableau est de longueur supérieure ou égale à 1 et que le
                     premier et le dernier élément du tableau ont la même valeur
                     - elle vaut false dans les autres cas
